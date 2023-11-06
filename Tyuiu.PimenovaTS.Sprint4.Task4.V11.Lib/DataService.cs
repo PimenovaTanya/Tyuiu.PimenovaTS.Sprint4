@@ -9,7 +9,7 @@ namespace Tyuiu.PimenovaTS.Sprint4.Task4.V11.Lib
 {
     public class DataService : ISprint4Task4V11
     {
-        public int[,] Calculate(int[,] matrix)
+        public int Calculate(int[,] matrix)
         {
             int kols = matrix.GetUpperBound(0) + 1;
             int kolst = matrix.Length / kols;
@@ -19,7 +19,7 @@ namespace Tyuiu.PimenovaTS.Sprint4.Task4.V11.Lib
             {
                 for (int j = 0; j < kolst; j++)
                 {
-                    if (j == 3)
+                    if (matrix[i, j] % 2 != 0)
                     {
                         job += matrix[i, j];
                     }
